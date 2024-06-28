@@ -117,7 +117,7 @@ def find_lyrics_by_stemmed_word(word):
     grouped['Lyrics'] = grouped['Text'].apply(lambda x: ' '.join(x))
     return grouped
 
-@app.route('/', methods=['GET'])
+@app.route('/similar_lyrics', methods=['GET'])
 def similiar_lyrics():
     query = request.args.get('query')
     query = re.sub(r'[^\w\s]', '', query) if query else ''
