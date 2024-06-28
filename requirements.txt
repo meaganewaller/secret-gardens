@@ -4,5 +4,5 @@ matplotlib==3.9.0
 nltk==3.8.1
 pandas==2.2.2
 python-dotenv==1.0.1
-gunicorn==20.0.4
+gunicorn==22.0.0
 itsdangerous==2.2.0
