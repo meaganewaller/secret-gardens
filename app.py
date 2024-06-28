@@ -9,6 +9,7 @@ import nltk
 from markupsafe import Markup, escape
 from dotenv import load_dotenv
 import os
+from waitress import serve
 
 load_dotenv()
 
@@ -156,4 +157,7 @@ def similiar_lyrics():
     return jsonify(grouped_results)
 
 if __name__ == '__main__':
-    app.run(debug=DEBUG)
+    if DEBUG:
+        app.run(debug=True)
+    else:
+      serve(app, port=10081)
