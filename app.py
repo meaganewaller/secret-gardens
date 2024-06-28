@@ -158,6 +158,6 @@ def similiar_lyrics():
 
 if __name__ == '__main__':
     if DEBUG:
-        app.run(debug=True)
+        app.run(debug=DEBUG)
     else:
-      serve(app, port=10081)
+        serve(app, port=5000)
